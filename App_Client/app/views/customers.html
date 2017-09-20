@@ -1,0 +1,34 @@
+
+<div class="wrapper wrapper-content animated fadeInRight">
+    <div class="row">
+        <div id="targetElement"></div>
+        <div dx-toast="{
+        displayTime: 3000,
+        position: {
+            of: '#targetElement'
+        },
+        bindingOptions: {
+             message: 'toastMessage',
+             type: 'toastType',
+             visible: 'toastVisible',
+            'position.my': 'myValue',
+            'position.at': 'atValue',
+            'position.offset': 'offsetValue'
+        }
+    }"></div>
+
+        <div class="text-center m-t-lg">
+            <h1>
+                Customers
+            </h1>
+        </div>
+        <simple-spinner display-when="isBusy"></simple-spinner>
+
+        <div id="toast" ng-show="is_load">
+            <div id="gridContainer" ng-show='customers' dx-data-grid="gridSettings"></div>
+        </div>
+    </div>
+</div>
+
+
+
